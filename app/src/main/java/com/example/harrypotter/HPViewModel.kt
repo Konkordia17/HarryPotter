@@ -17,6 +17,7 @@ class HPViewModel : ViewModel() {
         viewModelScope.launch {
             val characters = repository.getCharacters()
             charactersHP.value = characters
+            repository.insertCharacters(characters)
         }
     }
 }

@@ -12,9 +12,8 @@ class HPAdapter : ListAdapter<Character, HPAdapter.HPViewHolder>(DiffUtilCallBac
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HPViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding =ItemCharacterBinding.inflate(inflater, parent, false)
+        val binding = ItemCharacterBinding.inflate(inflater, parent, false)
         return HPViewHolder(binding)
-
     }
 
     override fun onBindViewHolder(holder: HPViewHolder, position: Int) {

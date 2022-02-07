@@ -1,9 +1,9 @@
 package com.example.harrypotter
 
 import android.util.Log
-import java.lang.Exception
 
 class HPRepository {
+    private val database = HPDataBase.getInstance(DBApp.app.applicationContext)
 
     suspend fun getCharacters(): List<Character> {
         try {
@@ -12,5 +12,9 @@ class HPRepository {
             Log.e("QAW", "{$e}")
         }
         return emptyList()
+    }
+
+    suspend fun insertCharacters(characters: List<Character>) {
+        database.characterDao().insertCharacters(characters)
     }
 }
