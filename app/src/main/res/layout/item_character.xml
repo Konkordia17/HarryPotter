@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/species_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="species"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/house_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="house"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/patronus_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="patronus"
+        android:padding="16dp" />
+
+</LinearLayout>

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class HPViewModel: ViewModel() {
+class HPViewModel : ViewModel() {
     private val repository = HPRepository()
 
     private val charactersHP = MutableLiveData<List<Character>>()

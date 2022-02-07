@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.harrypotter.databinding.CharacterBinding
+import com.example.harrypotter.databinding.ItemCharacterBinding
 
 class HPAdapter : ListAdapter<Character, HPAdapter.HPViewHolder>(DiffUtilCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HPViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = CharacterBinding.inflate(inflater, parent, false)
+        val binding =ItemCharacterBinding.inflate(inflater, parent, false)
         return HPViewHolder(binding)
 
     }
@@ -21,13 +21,14 @@ class HPAdapter : ListAdapter<Character, HPAdapter.HPViewHolder>(DiffUtilCallBac
         holder.bind(getItem(position))
     }
 
-    class HPViewHolder(private val binding: CharacterBinding) :
+    class HPViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(character: Character) {
             with(binding) {
                 nameTextView.text = character.name
                 houseTextView.text = character.house
                 speciesTextView.text = character.species
+                patronusTextView.text = character.patronus
                 Glide.with(itemView)
                     .load(character.image)
                     .into(avatar)

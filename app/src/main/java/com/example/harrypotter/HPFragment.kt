@@ -41,11 +41,11 @@ class HPFragment : Fragment(R.layout.fragment_hp) {
         }
     }
 
-  private fun initList() {
+    private fun initList() {
         adapterHP = HPAdapter()
         with(binding.recyclerView) {
             adapter = adapterHP
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             val dividerItemDecoration =
                 DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
             addItemDecoration(dividerItemDecoration)

@@ -10,5 +10,6 @@ data class Character(
     val name: String,
     val species: String,
     val house: String,
-    val image: String
+    val image: String,
+    val patronus: String
 ) : Parcelable
